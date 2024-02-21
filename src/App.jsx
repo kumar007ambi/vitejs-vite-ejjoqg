@@ -1,16 +1,21 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import { useState,useEffect } from 'react';
 import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState('hello');
+  const [cnt, setCnt] = useState(0);
 
   function handleChange(e) {
     setText(e.target.value);
   }
   
+  useEffect(() => {
+    setTimeout(() => {
+      setCnt((cnt) => cnt + 5);
+    }, 1000);
+  },[]);
+
   return (
     <>
       <div className="card">
@@ -30,6 +35,7 @@ function App() {
           Reset
         </button>
       </div>
+      <h1>The count is : {cnt} </h1>;
     </>
   );
 }
