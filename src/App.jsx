@@ -14,7 +14,7 @@ function App() {
     setTimeout(() => {
       setCnt((cnt) => cnt + 5);
     }, 1000);
-  });
+  },[]);
 
   return (
     <>
