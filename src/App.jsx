@@ -12,7 +12,7 @@ function App() {
   
   useEffect(() => {
     setTimeout(() => {
-      setCnt((cnt) => cnt + 5);
+      setCnt((cnt) => cnt + 10);
     }, 1000);
   },[]);
 
